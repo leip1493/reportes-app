@@ -1,9 +1,9 @@
-// import { default as Reboot } from "../assets/reboot.png"
-// import { default as Cravy } from "../assets/cravy.png"
-// import { default as Dribbble } from "../assets/dribbble.png"
-// import { default as Basecamp } from "../assets/basecamp.png"
-// import { default as Discord } from "../assets/discord.png"
-// import { default as OnePassword } from "../assets/onepassword.png"
+const Reboot = require("../../assets/reboot.png")
+const Cravy = require("../../assets/cravy.png")
+const Dribbble = require("../../assets/dribbble.png")
+const Basecamp = require("../../assets/basecamp.png")
+const Discord = require("../../assets/discord.png")
+const OnePassword = require("../../assets/onepassword.png")
 
 export const MARKERS_DATA = [
   {
@@ -13,7 +13,7 @@ export const MARKERS_DATA = [
     color: "#2F3136",
     name: "Reboot Studio",
     direction: "Carrer de Pujades, 100",
-    // img: Reboot,
+    img: Reboot,
   },
   {
     id: "2",
@@ -22,7 +22,7 @@ export const MARKERS_DATA = [
     color: "#A3EAD8",
     name: "Cravy",
     direction: "Carrer de Pujades, 101",
-    // img: Cravy,
+    img: Cravy,
   },
   {
     id: "3",
@@ -31,7 +31,7 @@ export const MARKERS_DATA = [
     color: "#E990BB",
     name: "Dribbble",
     direction: "Carrer de Pujades, 102",
-    // img: Dribbble,
+    img: Dribbble,
   },
   {
     id: "4",
@@ -40,7 +40,7 @@ export const MARKERS_DATA = [
     color: "#EFD080",
     name: "Basecamp",
     direction: "Carrer de Pujades, 103",
-    // img: Basecamp,
+    img: Basecamp,
   },
   {
     id: "5",
@@ -49,7 +49,7 @@ export const MARKERS_DATA = [
     color: "#98AFE9",
     name: "Discord",
     direction: "Carrer de Pujades, 104",
-    // img: Discord,
+    img: Discord,
   },
   {
     id: "6",
@@ -58,6 +58,6 @@ export const MARKERS_DATA = [
     color: "#4E87EB",
     name: "1 Password",
     direction: "Carrer de Pujades, 105",
-    // img: OnePassword,
+    img: OnePassword,
   },
 ]
