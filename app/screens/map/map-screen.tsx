@@ -9,6 +9,10 @@ import { color } from "../../theme"
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps"
 import { mapStyle } from "./mapStyle"
 import { MARKERS_DATA } from "./mapMarkers"
+import { CustomMarker } from "../../components/custom-marker/custom-marker"
+import { TopBar } from "../../components/top-bar/top-bar"
+import { useMap } from "../../hooks/use-map/use-map"
+import { BottomSheet } from "../../components/bottom-sheet/bottom-sheet"
 
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
@@ -21,11 +25,15 @@ export const MapScreen = observer(function MapScreen() {
 
   // Pull in navigation via hook
   // const navigation = useNavigation()
+  const { mapRef, selectedMarker, handleNavigateToPoint, handelResetInitialPosition } = useMap()
+
   return (
-    <Screen style={ROOT} preset="scroll">
+    <Screen style={ROOT} preset="fixed">
       <Text preset="header" text="" />
       <View style={styles.container}>
+        <TopBar onPressElement={handelResetInitialPosition} />
         <MapView
+          ref={mapRef}
           customMapStyle={mapStyle}
           provider={PROVIDER_GOOGLE}
           style={styles.mapStyle}
@@ -38,12 +46,17 @@ export const MapScreen = observer(function MapScreen() {
           mapType="standard"
         >
           {MARKERS_DATA.map((marker) => (
-            <Marker
+            <CustomMarker
+              selectedMarker={selectedMarker}
               key={marker.id}
-              coordinate={{ latitude: marker.latitude, longitude: marker.longitude }}
+              id={marker.id}
+              color={marker.color}
+              latitude={marker.latitude}
+              longitude={marker.longitude}
             />
           ))}
         </MapView>
+        <BottomSheet onPressElement={handleNavigateToPoint} />
       </View>
     </Screen>
   )
