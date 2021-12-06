@@ -10,10 +10,7 @@ export function useMap() {
 
   const handleNavigateToPoint = useCallback(
     (id, lat, long) => {
-      console.log({ id, lat, long })
-      console.log(mapRef)
       if (mapRef) {
-        console.log("MUEVETE!")
         mapRef.current.animateCamera(
           {
             center: {
