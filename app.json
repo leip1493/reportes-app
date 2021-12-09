@@ -1,9 +1,9 @@
 {
-  "name": "LocationApp",
-  "displayName": "LocationApp",
+  "name": "ReportesApp",
+  "displayName": "ReportesApp",
   "expo": {
-    "name": "LocationApp",
-    "slug": "LocationApp",
+    "name": "ReportesApp",
+    "slug": "ReportesApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",

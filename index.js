@@ -10,5 +10,5 @@
 import App from "./app/app.tsx"
 import { AppRegistry } from "react-native"
 
-AppRegistry.registerComponent("LocationApp", () => App)
+AppRegistry.registerComponent("ReportesApp", () => App)
 export default App

@@ -29,7 +29,7 @@ export const MapScreen = observer(function MapScreen() {
 
   return (
     <Screen style={ROOT} preset="fixed">
-      <Text preset="header" text="Demo LocationApp" />
+      <Text preset="header" text="Demo ReportesApp" />
       <View style={styles.container}>
         <TopBar onPressElement={handelResetInitialPosition} />
         <MapView
